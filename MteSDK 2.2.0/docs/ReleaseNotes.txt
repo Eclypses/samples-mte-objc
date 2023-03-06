@@ -1,0 +1,302 @@
+Version 2.2.0
+-------------
+- Add WASM/JS MTE Vault implementation.
+- Support Java Exception serialization.
+- Pin all internal buffers in C# language interfaces to work around a bug in at   least some C# compiler/runtime combinations that move buffer location without   copying contents.
+- Update MKE C# interface to support strings more efficiently.
+- Redesign the WASM/JS SDK to create a single package that supports CommonJS 
+  modules, ECMAScript modules, and Typescript.
+- Fix an issue with WASM/JS where the saved state array would become invalid if   the encoder/decoder was deleted.
+- Clarify Swift exception throwing in MTE Vault.
+
+Version 2.1.2
+-------------
+- Zero the async saved state when not using async to allow the state to be used
+  with async.
+- Added build support for the 32MM0064GPL036 microcontroller.
+- Added build support for the Apple M1.
+- Changed Java MteVault exception handling to use a custom exception class that
+  is checked so it cannot be accidentally ignored.
+- Fixed issue with iOS SHA-512 ARM64 PAA detection.
+
+Version 2.1.1
+-------------
+- Fixed issue with missing enum strings for cipher and hash in Trial mode.
+- Minor comment cleanup.
+- Minor updates to Java language interface to address Android Studio warnings.
+- Changed Swift access specifier to support modules better.
+
+Version 2.1.0
+-------------
+- Fixed alignment issue in increment DRBG.
+- ESP32 hardware acceleration is now optional in case the hardware is used by
+  other tasks.
+- Changed C# namespace to Eclypses.MTE for the main language interface and
+  Eclypses.MTE.Interop for the internal interop classes.
+- Added C# interfaces to define the classes' interfaces.
+- Added MTE Vault in Swift and Java.
+
+Version 2.0.1
+-------------
+- Language interface improvements.
+- Fixed issue with C# constructor exceptions.
+- Fixed C# warnings.
+- Fixed issue with MKE chunk encryption and unaligned buffers.
+- Fixed issues with Go's handling of zero-length buffers.
+- Fixed Go MKE decrypt chunking issue.
+- Changed naming of Go cgo functions.
+- Fixed issue with Python initializer exceptions.
+- Fixed issue with WASM Jailbreak nonce mutator.
+
+Version 2.0.0
+-------------
+- The ECL library's implementations of AES, SHA, and DRBGs is now used instead
+  of MTE's original implementation.
+- The ECL library's ESP32 implementation uses the ESP32's hardware
+  cryptographic modules instead of software to the extent possible.
+- The MTE algorithm has changed to add additional security. MTE 2.x outputs are
+  not compatible with MTE 1.x outputs.
+- The developer's guides have been updated extensively.
+- The ARM64 functions and classes have been removed. The ARM64 PAA is now
+  automatically enabled when available.
+- The self-test functions have been removed.
+- A new global init function is now required to be called in all cases. The
+  language interfaces other than C take care of this automatically.
+- The status codes have been rearranged to align with ECL. Some new codes were
+  added as well.
+- Save/restore state functions now return status which should be checked like
+  all other status returns. The status may return an error when certain DRBG
+  implementations are used.
+- The language interfaces no longer claim to zeroize the nonce, since that
+  never happened and was never a requirement.
+- The language interfaces now zeroize the entropy in all cases where the
+  language allows it for consistent security and to avoid confusion about when
+  it happens or doesn't. The languages that do not allow it are commented to
+  warn you about it not being zeroized.
+- The core and fixed-length limited input range feature has been removed. All
+  APIs that took the input byte range have changed to remove those options. All
+  possible inputs are now supported in all cases.
+- The MKE interface has been changed to remove the minToEncrypt option and
+  always do encryption.
+- MKE encrypt and decrypt chunk now return a status which must be checked.
+- The MKE encrypt chunk interface changed to use state like decrypt.
+- The Base64 state restore API has been improved to not overwrite the input.
+- The entropy, nonce, and timestamp callbacks are no longer virtual (or
+  equivalent). There are now callback interfaces to allow you to use a plugin
+  to override any or all of the callbacks instead of deriving from an encoder
+  or decoder class. This allows for more reuse and is easier to use.
+- The jailbreak detection classes have been condensed down to use the new
+  nonce plugin.
+- There are now Node.js command line WASM demos in addition to the browser
+  demos.
+- Language interfaces have added default constructors/initializers/factory
+  methods which should be used in most cases. The default constructors take
+  care of buildtime options and will default to reasonable runtime options.
+  Only in cases where you have runtime options you need to control fully should
+  you use the constructors/initializers that take all options.
+- Language interfaces are now versioned to match the MTE version and check for
+  a match against the library to ensure compatibility.
+- The C# language interface has been tweaked to support older .NET versions.
+  The developer's guide lists the supported versions.
+- Added additional documentation files describing how to set up MTE-capable
+  projects in Android Studio and Xcode.
+
+Version 1.5.1
+-------------
+- Updated Java language interfaces to work around different Java versions'
+  handling of ByteBuffer.position().
+- Fixed C# MKE decoder interface chunking issue with certain combinations of
+  options and inputs.
+- Fixed Java MKE decoder interface chunking issue with certain combinations of
+  options and inputs.
+- Fixed Go issue with non-minimum entropy size.
+- Added guidance about C# interop to the developer's guide.
+- Added DLL fallback to working directory on Windows for Python.
+- Enhanced C# interop to look in the working directory if the dynamic library
+  cannot be found.
+
+Version 1.5.0
+-------------
+- Fixed Python non-Base64 encoder return type issue.
+- Fixed Python max nonce size accessor.
+- Fixed Python MteJail function signatures.
+- Added iOS ARM64 extension check helper code to Objective-C and Swift. Updated
+  dev guide to provide good iOS ARM64 fast crypto guidance.
+- Fixed Go demo ReadMe files since Go does not use dynamic MTE libraries.
+- Fixed Go linker issues on Linux.
+- Fixed Go handling of zero-length entropy.
+- Fixed issue with NODF DRBGs not instantiating correctly when using an
+  external entropy buffer.
+- Fixed C#, Go, Java, and Python demo ReadMe files to include all enumerations.
+- Added overloads to C++, C#, Java, Objective-C, and Swift language interfaces
+  for better efficiency if external buffers are used.
+- Refactored C# language interface to support dynamic interop mapping. Almost
+  all static functions are now members to support the interop object.
+- Fixed MKE chunk-mode decrypt buffer management in all language interfaces.
+- Updated jailbreak detection for iOS.
+- Updated jailbreak detection for Android.
+- Minor changes to Java and Swift jailbreak language interfaces.
+
+Version 1.4.5
+-------------
+- Fixed core and MKE decoder reseed counter functions in runtime options builds.
+- Fixed ARM64 AES decrypt PAA selectors.
+- Fixed WASM/JS MKE encrypt/decrypt chunking returning wrong finalization.
+- Added Android ARM64 PAA-enabling example in developer's guide.
+- WASM TS/JS now removes unused add-ons to reduce size and avoid confusion.
+- Rearranged WASM/JS demos to clarify WASM instantiation requirements and add
+  better error checking.
+- Updated all demo ReadMe.txt files to clarify what is required to assemble
+  the demo to be usable.
+- Miscellaneous developer guide updates.
+
+Version 1.4.4
+-------------
+- Fixed Android ARM64 JNI library to properly export MteArm64 class functions.
+- Fixed Java MteArm64 class to allow use before other calls.
+- Updated license.
+- Fixed NPM package.json files to specify the main and types files as
+  appropriate.
+- Fixed potential issue with AES-256 using x86_64 AES-NI PAA.
+
+Version 1.4.3
+-------------
+- Added .NET Standard 2.1 as another target framework for Nuget packages.
+- Changed Windows DLL define from MTEC_BUILD_SHARED to MTE_BUILD_SHARED.
+- Fixed NPM package naming.
+- Fixed Swift integer nonce setting for DRBGs with small nonces.
+- Added developer guides.
+- Added template Swift bridging header.
+
+Version 1.4.2
+-------------
+- Fixed integer nonce conversion to byte array in WASM/JS.
+
+Version 1.4.1
+-------------
+- Fixed some incorrect cipher/hash informational values.
+- Fixed AES CBC mode issues on 32 bit platforms.
+- Changed naming of Nuget packages to avoid conflicts when multiple packages
+  are produced with different options.
+- Fixed integer nonce conversion to byte arrays in C#, Go, Java, Python, and
+  Swift to avoid potentially undefined behavior.
+
+Version 1.4.0
+-------------
+- Fixed MKE encoder uninstantiate() call in WASM language interface.
+- Changed Nuget package name to "Eclypses.mte" so no changes have to be made in
+  code when switching to different build options.
+- Added missing "@classmethod" decorations on Python Arm64 class methods.
+- Changed Python type checking to allow for derivation.
+- Renamed Objective-C jailbreak algorithm enumeration to MteJailAlgo to be
+  consistent with WASM/JS and avoid name clashes.
+- Renamed some Objective-C messages for consistency and to fix a bug.
+- Added a set of functions to query the buildtime options.
+- Added checks on buildtime option arguments where previously they were simply
+  ignored. This will help alleviate confusion when using buildtime options that
+  don't match the arguments anymore. With the addition of the functions to
+  query the buildtime options, it is now easy to code things up to use runtime
+  or buildtime options that are always matching. Some APIs that previously
+  returned void because they could not fail had to change to return a status to
+  support this. Only the C language interface requires the SDK user to use
+  those functions directly; other language interfaces are only affected
+  internally.
+- Added encoder/decoder status checking to make sure the state has been
+  properly initialized and instantiated before using to prevent inadvertent
+  loss of security. The instantiate call cannot happen before initialization
+  and encode/decode cannot occur if not successfully instantiated; instead
+  error status will be returned indicating an invalid input.
+- Removed the default entropy and nonce from the language interfaces to prevent
+  inadvertent use of them, leading to a loss of security.
+- Added nonce size checks for FIPS 140-3 compliance.
+- Adjusted minimum nonce requirements for SHA-based DRBGs for FIPS 140-3
+  compliance.
+- Refactored WASM/JS entropy and nonce handling to be more consistent with other
+  languages.
+- Refactored WASM/JS core demo to demonstrate overriding callbacks as the other
+  language core demos do.
+- Removed alignment requirements on buffers to support languages that cannot
+  easily align buffers.
+
+Version 1.3.2
+-------------
+- Fixed Swift MKE chunking buffer size issues.
+- Fixed Java set entropy issue.
+- Fixed documentation of C++ timestamp callback behavior.
+- Fixed documentation of Objective-C timestamp callback behavior.
+- Fixed documentation of Swift timestamp callback behavior.
+- Clarified documentation in mte_dec.h regarding the status.
+- Fixed C Support API's sequence window argument to be signed instead of
+  unsigned.
+- Added missing documentation about timestamp callback usage in C Support API.
+- Removed unused status code.
+- Added IncrReset helper struct to C++ language interface to help with testing.
+- Fixed Go decoder messages skipped integer return type.
+- Removed UTF-8 BOMs from demo and language interface files.
+- Removed unnecessary Swift code.
+- Removed unnecessary semicolons from Swift.
+- Improved WASM/JS nonce handling to support 64 bit nonce integers instead of
+  only 32.
+- Changed the Base64 state save function signatures in the C Support API to
+  return char * instead of void * for consistency in Base64 functions.
+- Renamed mte_message_get_timestamp64 to mte_verifier_get_timestamp64 in the C
+  APIs. Moved this to its own header mte_verifier_defs.h, which is now
+  distributed instead of mte_message_defs.h, which included many typedefs not
+  needed by SDK users.
+
+Version 1.3.1
+-------------
+- Changed TypeScript const enum to non-const enum since they are exported.
+- Updated WASM demos to use the non-const enums.
+- Fixed buffer size issues in Swift non-Base64 encode/decode methods.
+- Fixed Swift handling of zero-length entropy for fake DRBG.
+- Fixed typo in mte_enc.h comments.
+
+Version 1.3.0
+-------------
+- Fixed Java MteJail to work correctly with Android/iOS 64 bit simulators.
+- Fixed memory sizing issues in MKE.
+- Fixed alignment issues in MKE.
+- Added FIPS 140-3 self-test capability to all DRBG, cipher, and hash
+  algorithms.
+- Added APIs to let users run the self-tests.
+- Removed mte_mke_base (mte_mkeBase in language interfaces), moving its
+  functionality to mte_base (MteBase) to consolidate all information and FIPS
+  140-3 self-tests in one place, and not require MKE to do DRBG primitive self-
+  tests.
+- Fixed comments in encoder and decoder headers related to external DRBGs.
+- Refactored SHA-1/256/512 implementations to support optimizations of DRBGs
+  based on them.
+- Optimized HASH-SHA1/256/512 DRBGs.
+- Refactored SHA-512 length handling to get full 128 bit support.
+- Optimized MKE's use of provided ciphers and hashes.
+
+Version 1.2.0
+-------------
+- Optimized tokenization algorithms.
+- Fixed JNI issues when DRBG errors occur.
+
+Version 1.1.0
+-------------
+- The behavior of the sequencing verifier has been enhanced to support async
+  operation within a limited window, as well as supporting the previous
+  behavior. The async mode is enabled by using a negative sequence window.
+  Anyone using C, C++, or Objective-C should check that their sequence window
+  variable is signed, not unsigned now. Other languages were already using
+  signed numbers since that is SOP for those languages. A new demo app in each
+  language is now part of the SDK to show the various sequencing modes in
+  action.
+- Fixed comments in mte_dec.h.
+- Moved license in HTML examples to avoid a charset warning.
+- Enabled additional optimizations in non-runtime option builds.
+- Added optimized handling for 32 and 64 byte token sizes to support higher
+  security level DRBGs.
+- Fixed temporary token size for non-power-of-two token sizes to reduce memory
+  usage.
+- Added optimized handling of 1 byte token size to support low-level devices.
+- Added ReleaseNotes.txt.
+
+Version 1.0.0
+-------------
+- Initial release.
+
