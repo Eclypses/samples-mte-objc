@@ -1,0 +1,481 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D0DEE75E28C7EC5C00D54668 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DEE75D28C7EC5C00D54668 /* main.m */; };
+		D0DEF29128E39BC500D54668 /* libmte_wrap.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0DEF27928E39BC500D54668 /* libmte_wrap.a */; };
+		D0DEF29228E39BC500D54668 /* libmte_jail.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0DEF27A28E39BC500D54668 /* libmte_jail.a */; };
+		D0DEF29328E39BC500D54668 /* libmte_mkee.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0DEF27B28E39BC500D54668 /* libmte_mkee.a */; };
+		D0DEF29428E39BC500D54668 /* libmte_mted.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0DEF27C28E39BC500D54668 /* libmte_mted.a */; };
+		D0DEF29528E39BC500D54668 /* libmte_mked.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0DEF27D28E39BC500D54668 /* libmte_mked.a */; };
+		D0DEF29628E39BC500D54668 /* libmte_mtee.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0DEF27E28E39BC500D54668 /* libmte_mtee.a */; };
+		D0DEF29728E39BC500D54668 /* libmte_flen.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0DEF27F28E39BC500D54668 /* libmte_flen.a */; };
+		D0DEF29828E39BC500D54668 /* libmte_mteb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0DEF28028E39BC500D54668 /* libmte_mteb.a */; };
+		D0DEF29928E39BC500D54668 /* MteMkeEnc.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DEF28328E39BC500D54668 /* MteMkeEnc.m */; };
+		D0DEF29A28E39BC500D54668 /* MteEnc.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DEF28428E39BC500D54668 /* MteEnc.m */; };
+		D0DEF29B28E39BC500D54668 /* MteFlenEnc.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DEF28528E39BC500D54668 /* MteFlenEnc.m */; };
+		D0DEF29C28E39BC500D54668 /* MteDec.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DEF28828E39BC500D54668 /* MteDec.m */; };
+		D0DEF29D28E39BC500D54668 /* MteMkeDec.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DEF28928E39BC500D54668 /* MteMkeDec.m */; };
+		D0DEF29E28E39BC500D54668 /* MteJail.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DEF28C28E39BC500D54668 /* MteJail.m */; };
+		D0DEF29F28E39BC500D54668 /* MteBase.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DEF28D28E39BC500D54668 /* MteBase.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D0DEE75828C7EC5C00D54668 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		D0DEE75A28C7EC5C00D54668 /* MteSequencing */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MteSequencing; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0DEE75D28C7EC5C00D54668 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D0DEF25528E39BC500D54668 /* License.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = License.pdf; sourceTree = "<group>"; };
+		D0DEF25728E39BC500D54668 /* mte_flen_enc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mte_flen_enc.h; sourceTree = "<group>"; };
+		D0DEF25828E39BC500D54668 /* mte_verifiers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mte_verifiers.h; sourceTree = "<group>"; };
+		D0DEF25928E39BC500D54668 /* mte_mke_dec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mte_mke_dec.h; sourceTree = "<group>"; };
+		D0DEF25A28E39BC500D54668 /* mte_license.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mte_license.h; sourceTree = "<group>"; };
+		D0DEF25B28E39BC500D54668 /* mte_base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mte_base64.h; sourceTree = "<group>"; };
+		D0DEF25C28E39BC500D54668 /* mte_wrap_flen_enc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mte_wrap_flen_enc.h; sourceTree = "<group>"; };
+		D0DEF25D28E39BC500D54668 /* mte_verifier_defs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mte_verifier_defs.h; sourceTree = "<group>"; };
+		D0DEF25E28E39BC500D54668 /* mte_status.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mte_status.h; sourceTree = "<group>"; };
+		D0DEF25F28E39BC500D54668 /* mte_export.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mte_export.h; sourceTree = "<group>"; };
+		D0DEF26028E39BC500D54668 /* mte_version.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mte_version.h; sourceTree = "<group>"; };
+		D0DEF26128E39BC500D54668 /* mte_settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mte_settings.h; sourceTree = "<group>"; };
+		D0DEF26228E39BC500D54668 /* mte_cipher_defs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mte_cipher_defs.h; sourceTree = "<group>"; };
+		D0DEF26328E39BC500D54668 /* mte_hashes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mte_hashes.h; sourceTree = "<group>"; };
+		D0DEF26428E39BC500D54668 /* mte_mke_enc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mte_mke_enc.h; sourceTree = "<group>"; };
+		D0DEF26528E39BC500D54668 /* mte_struct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mte_struct.h; sourceTree = "<group>"; };
+		D0DEF26628E39BC500D54668 /* mte_init_info.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mte_init_info.h; sourceTree = "<group>"; };
+		D0DEF26728E39BC500D54668 /* mte_wrap_enc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mte_wrap_enc.h; sourceTree = "<group>"; };
+		D0DEF26828E39BC500D54668 /* mte_drbg_defs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mte_drbg_defs.h; sourceTree = "<group>"; };
+		D0DEF26928E39BC500D54668 /* mte_wrap_mke_enc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mte_wrap_mke_enc.h; sourceTree = "<group>"; };
+		D0DEF26A28E39BC500D54668 /* mte_alloca.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mte_alloca.h; sourceTree = "<group>"; };
+		D0DEF26B28E39BC500D54668 /* mte_base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mte_base.h; sourceTree = "<group>"; };
+		D0DEF26C28E39BC500D54668 /* mte_jail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mte_jail.h; sourceTree = "<group>"; };
+		D0DEF26D28E39BC500D54668 /* mte_wrap_jail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mte_wrap_jail.h; sourceTree = "<group>"; };
+		D0DEF26E28E39BC500D54668 /* mte_init.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mte_init.h; sourceTree = "<group>"; };
+		D0DEF26F28E39BC500D54668 /* mte_ciphers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mte_ciphers.h; sourceTree = "<group>"; };
+		D0DEF27028E39BC500D54668 /* mte_wrap_base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mte_wrap_base.h; sourceTree = "<group>"; };
+		D0DEF27128E39BC500D54668 /* mte_dec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mte_dec.h; sourceTree = "<group>"; };
+		D0DEF27228E39BC500D54668 /* mte_int.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mte_int.h; sourceTree = "<group>"; };
+		D0DEF27328E39BC500D54668 /* mte_enc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mte_enc.h; sourceTree = "<group>"; };
+		D0DEF27428E39BC500D54668 /* mte_drbgs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mte_drbgs.h; sourceTree = "<group>"; };
+		D0DEF27528E39BC500D54668 /* mte_wrap_dec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mte_wrap_dec.h; sourceTree = "<group>"; };
+		D0DEF27628E39BC500D54668 /* mte_hash_defs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mte_hash_defs.h; sourceTree = "<group>"; };
+		D0DEF27728E39BC500D54668 /* mte_wrap_mke_dec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mte_wrap_mke_dec.h; sourceTree = "<group>"; };
+		D0DEF27928E39BC500D54668 /* libmte_wrap.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libmte_wrap.a; sourceTree = "<group>"; };
+		D0DEF27A28E39BC500D54668 /* libmte_jail.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libmte_jail.a; sourceTree = "<group>"; };
+		D0DEF27B28E39BC500D54668 /* libmte_mkee.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libmte_mkee.a; sourceTree = "<group>"; };
+		D0DEF27C28E39BC500D54668 /* libmte_mted.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libmte_mted.a; sourceTree = "<group>"; };
+		D0DEF27D28E39BC500D54668 /* libmte_mked.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libmte_mked.a; sourceTree = "<group>"; };
+		D0DEF27E28E39BC500D54668 /* libmte_mtee.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libmte_mtee.a; sourceTree = "<group>"; };
+		D0DEF27F28E39BC500D54668 /* libmte_flen.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libmte_flen.a; sourceTree = "<group>"; };
+		D0DEF28028E39BC500D54668 /* libmte_mteb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libmte_mteb.a; sourceTree = "<group>"; };
+		D0DEF28328E39BC500D54668 /* MteMkeEnc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MteMkeEnc.m; sourceTree = "<group>"; };
+		D0DEF28428E39BC500D54668 /* MteEnc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MteEnc.m; sourceTree = "<group>"; };
+		D0DEF28528E39BC500D54668 /* MteFlenEnc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MteFlenEnc.m; sourceTree = "<group>"; };
+		D0DEF28628E39BC500D54668 /* MteBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MteBase.h; sourceTree = "<group>"; };
+		D0DEF28728E39BC500D54668 /* MteJail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MteJail.h; sourceTree = "<group>"; };
+		D0DEF28828E39BC500D54668 /* MteDec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MteDec.m; sourceTree = "<group>"; };
+		D0DEF28928E39BC500D54668 /* MteMkeDec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MteMkeDec.m; sourceTree = "<group>"; };
+		D0DEF28A28E39BC500D54668 /* MteEnc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MteEnc.h; sourceTree = "<group>"; };
+		D0DEF28B28E39BC500D54668 /* MteMkeEnc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MteMkeEnc.h; sourceTree = "<group>"; };
+		D0DEF28C28E39BC500D54668 /* MteJail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MteJail.m; sourceTree = "<group>"; };
+		D0DEF28D28E39BC500D54668 /* MteBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MteBase.m; sourceTree = "<group>"; };
+		D0DEF28E28E39BC500D54668 /* MteFlenEnc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MteFlenEnc.h; sourceTree = "<group>"; };
+		D0DEF28F28E39BC500D54668 /* MteMkeDec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MteMkeDec.h; sourceTree = "<group>"; };
+		D0DEF29028E39BC500D54668 /* MteDec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MteDec.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D0DEE75728C7EC5C00D54668 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0DEF29828E39BC500D54668 /* libmte_mteb.a in Frameworks */,
+				D0DEF29328E39BC500D54668 /* libmte_mkee.a in Frameworks */,
+				D0DEF29228E39BC500D54668 /* libmte_jail.a in Frameworks */,
+				D0DEF29528E39BC500D54668 /* libmte_mked.a in Frameworks */,
+				D0DEF29628E39BC500D54668 /* libmte_mtee.a in Frameworks */,
+				D0DEF29428E39BC500D54668 /* libmte_mted.a in Frameworks */,
+				D0DEF29128E39BC500D54668 /* libmte_wrap.a in Frameworks */,
+				D0DEF29728E39BC500D54668 /* libmte_flen.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D0DEE75128C7EC5C00D54668 = {
+			isa = PBXGroup;
+			children = (
+				D0DEF25328E39BC500D54668 /* MteSDK */,
+				D0DEE75C28C7EC5C00D54668 /* MteSequencing */,
+				D0DEE75B28C7EC5C00D54668 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D0DEE75B28C7EC5C00D54668 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D0DEE75A28C7EC5C00D54668 /* MteSequencing */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D0DEE75C28C7EC5C00D54668 /* MteSequencing */ = {
+			isa = PBXGroup;
+			children = (
+				D0DEE75D28C7EC5C00D54668 /* main.m */,
+			);
+			path = MteSequencing;
+			sourceTree = "<group>";
+		};
+		D0DEF25328E39BC500D54668 /* MteSDK */ = {
+			isa = PBXGroup;
+			children = (
+				D0DEF25428E39BC500D54668 /* license */,
+				D0DEF25628E39BC500D54668 /* include */,
+				D0DEF27828E39BC500D54668 /* lib */,
+				D0DEF28128E39BC500D54668 /* src */,
+			);
+			name = MteSDK;
+			path = ../MteSDK;
+			sourceTree = "<group>";
+		};
+		D0DEF25428E39BC500D54668 /* license */ = {
+			isa = PBXGroup;
+			children = (
+				D0DEF25528E39BC500D54668 /* License.pdf */,
+			);
+			path = license;
+			sourceTree = "<group>";
+		};
+		D0DEF25628E39BC500D54668 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				D0DEF25728E39BC500D54668 /* mte_flen_enc.h */,
+				D0DEF25828E39BC500D54668 /* mte_verifiers.h */,
+				D0DEF25928E39BC500D54668 /* mte_mke_dec.h */,
+				D0DEF25A28E39BC500D54668 /* mte_license.h */,
+				D0DEF25B28E39BC500D54668 /* mte_base64.h */,
+				D0DEF25C28E39BC500D54668 /* mte_wrap_flen_enc.h */,
+				D0DEF25D28E39BC500D54668 /* mte_verifier_defs.h */,
+				D0DEF25E28E39BC500D54668 /* mte_status.h */,
+				D0DEF25F28E39BC500D54668 /* mte_export.h */,
+				D0DEF26028E39BC500D54668 /* mte_version.h */,
+				D0DEF26128E39BC500D54668 /* mte_settings.h */,
+				D0DEF26228E39BC500D54668 /* mte_cipher_defs.h */,
+				D0DEF26328E39BC500D54668 /* mte_hashes.h */,
+				D0DEF26428E39BC500D54668 /* mte_mke_enc.h */,
+				D0DEF26528E39BC500D54668 /* mte_struct.h */,
+				D0DEF26628E39BC500D54668 /* mte_init_info.h */,
+				D0DEF26728E39BC500D54668 /* mte_wrap_enc.h */,
+				D0DEF26828E39BC500D54668 /* mte_drbg_defs.h */,
+				D0DEF26928E39BC500D54668 /* mte_wrap_mke_enc.h */,
+				D0DEF26A28E39BC500D54668 /* mte_alloca.h */,
+				D0DEF26B28E39BC500D54668 /* mte_base.h */,
+				D0DEF26C28E39BC500D54668 /* mte_jail.h */,
+				D0DEF26D28E39BC500D54668 /* mte_wrap_jail.h */,
+				D0DEF26E28E39BC500D54668 /* mte_init.h */,
+				D0DEF26F28E39BC500D54668 /* mte_ciphers.h */,
+				D0DEF27028E39BC500D54668 /* mte_wrap_base.h */,
+				D0DEF27128E39BC500D54668 /* mte_dec.h */,
+				D0DEF27228E39BC500D54668 /* mte_int.h */,
+				D0DEF27328E39BC500D54668 /* mte_enc.h */,
+				D0DEF27428E39BC500D54668 /* mte_drbgs.h */,
+				D0DEF27528E39BC500D54668 /* mte_wrap_dec.h */,
+				D0DEF27628E39BC500D54668 /* mte_hash_defs.h */,
+				D0DEF27728E39BC500D54668 /* mte_wrap_mke_dec.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		D0DEF27828E39BC500D54668 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				D0DEF27928E39BC500D54668 /* libmte_wrap.a */,
+				D0DEF27A28E39BC500D54668 /* libmte_jail.a */,
+				D0DEF27B28E39BC500D54668 /* libmte_mkee.a */,
+				D0DEF27C28E39BC500D54668 /* libmte_mted.a */,
+				D0DEF27D28E39BC500D54668 /* libmte_mked.a */,
+				D0DEF27E28E39BC500D54668 /* libmte_mtee.a */,
+				D0DEF27F28E39BC500D54668 /* libmte_flen.a */,
+				D0DEF28028E39BC500D54668 /* libmte_mteb.a */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		D0DEF28128E39BC500D54668 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				D0DEF28228E39BC500D54668 /* objc */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		D0DEF28228E39BC500D54668 /* objc */ = {
+			isa = PBXGroup;
+			children = (
+				D0DEF28328E39BC500D54668 /* MteMkeEnc.m */,
+				D0DEF28428E39BC500D54668 /* MteEnc.m */,
+				D0DEF28528E39BC500D54668 /* MteFlenEnc.m */,
+				D0DEF28628E39BC500D54668 /* MteBase.h */,
+				D0DEF28728E39BC500D54668 /* MteJail.h */,
+				D0DEF28828E39BC500D54668 /* MteDec.m */,
+				D0DEF28928E39BC500D54668 /* MteMkeDec.m */,
+				D0DEF28A28E39BC500D54668 /* MteEnc.h */,
+				D0DEF28B28E39BC500D54668 /* MteMkeEnc.h */,
+				D0DEF28C28E39BC500D54668 /* MteJail.m */,
+				D0DEF28D28E39BC500D54668 /* MteBase.m */,
+				D0DEF28E28E39BC500D54668 /* MteFlenEnc.h */,
+				D0DEF28F28E39BC500D54668 /* MteMkeDec.h */,
+				D0DEF29028E39BC500D54668 /* MteDec.h */,
+			);
+			path = objc;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D0DEE75928C7EC5C00D54668 /* MteSequencing */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0DEE76128C7EC5C00D54668 /* Build configuration list for PBXNativeTarget "MteSequencing" */;
+			buildPhases = (
+				D0DEE75628C7EC5C00D54668 /* Sources */,
+				D0DEE75728C7EC5C00D54668 /* Frameworks */,
+				D0DEE75828C7EC5C00D54668 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MteSequencing;
+			productName = "Simple MTE Core Console Demo";
+			productReference = D0DEE75A28C7EC5C00D54668 /* MteSequencing */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D0DEE75228C7EC5C00D54668 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					D0DEE75928C7EC5C00D54668 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+				};
+			};
+			buildConfigurationList = D0DEE75528C7EC5C00D54668 /* Build configuration list for PBXProject "MteSequencing" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D0DEE75128C7EC5C00D54668;
+			productRefGroup = D0DEE75B28C7EC5C00D54668 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D0DEE75928C7EC5C00D54668 /* MteSequencing */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D0DEE75628C7EC5C00D54668 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0DEF29B28E39BC500D54668 /* MteFlenEnc.m in Sources */,
+				D0DEE75E28C7EC5C00D54668 /* main.m in Sources */,
+				D0DEF29E28E39BC500D54668 /* MteJail.m in Sources */,
+				D0DEF29A28E39BC500D54668 /* MteEnc.m in Sources */,
+				D0DEF29928E39BC500D54668 /* MteMkeEnc.m in Sources */,
+				D0DEF29F28E39BC500D54668 /* MteBase.m in Sources */,
+				D0DEF29C28E39BC500D54668 /* MteDec.m in Sources */,
+				D0DEF29D28E39BC500D54668 /* MteMkeDec.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		D0DEE75F28C7EC5C00D54668 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		D0DEE76028C7EC5C00D54668 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		D0DEE76228C7EC5C00D54668 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8V98ZVB9SU;
+				ENABLE_HARDENED_RUNTIME = YES;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/../MteSDK/lib",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D0DEE76328C7EC5C00D54668 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8V98ZVB9SU;
+				ENABLE_HARDENED_RUNTIME = YES;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/../MteSDK/lib",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D0DEE75528C7EC5C00D54668 /* Build configuration list for PBXProject "MteSequencing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0DEE75F28C7EC5C00D54668 /* Debug */,
+				D0DEE76028C7EC5C00D54668 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0DEE76128C7EC5C00D54668 /* Build configuration list for PBXNativeTarget "MteSequencing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0DEE76228C7EC5C00D54668 /* Debug */,
+				D0DEE76328C7EC5C00D54668 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D0DEE75228C7EC5C00D54668 /* Project object */;
+}
